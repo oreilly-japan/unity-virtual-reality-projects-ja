@@ -18,7 +18,7 @@
 * Blender 2.77
 * Android SDK API level 23
 * Xcode 7.3.1
-* Google VR SDK for Unity v0.8.5
+* Google VR SDK for Unity v0.9.1
 
 #### ハードウェア（括弧内はOSのバージョン）
 
@@ -38,8 +38,18 @@
 
 サンプルコードの解説は本書籍をご覧ください。
 
+### ダウンロード方法
+Unity 5.4.x 系をお使いの場合は
+<https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/archive/master.zip>
+から、
+
+Unity 5.3.x 系をお使いの場合は
+<https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/archive/unity53x.zip>
+から、それぞれダウンロードしてください。
+
+### 使用方法
 code フォルダーの下に本書のUnityプロジェクトを章ごとに完成した状態で用意してあります。ただし、Unity標準アセットやGoogle VR SDK等は含まれていないので、プロジェクトをUnityで開いたら次の手順で必要なものをインポートしてください。
-（本書の手順に従って新規にプロジェクトを作成したい方は、resources フォルダーの下に各章ごとに必要なリソースファイルを置いてありますので、必要に応じてお使いください。）
+（本書の手順に従って新規にプロジェクトを作成したい方は、`resources`フォルダーの下に各章ごとに必要なリソースファイルを置いてありますので、必要に応じてお使いください。）
 
 1. メインメニューの［Assets］を選択します。それから［Import Package］→［Characters］の順に操作します。
 2. インポート可能なすべてのものをリスト表示したインポートダイアログがポップアップするので［Import］をクリックします。
