@@ -18,6 +18,10 @@ public class HeadGesture : MonoBehaviour {
 		isMovingDown = DetectMovingDown ();
 	}
 
+	private float CameraAngleFromGround() {
+		return Vector3.Angle (Vector3.down, Camera.main.transform.rotation * Vector3.forward);
+	}
+
 	private bool DetectFacingDown() {
 		return (CameraAngleFromGround () < 60.0f);
 	}
@@ -28,9 +32,5 @@ public class HeadGesture : MonoBehaviour {
 		float rate = deltaAngle / Time.deltaTime;
 		previousCameraAngle = angle;
 		return (rate >= sweepRate);
-	}
-
-	private float CameraAngleFromGround() {
-		return Vector3.Angle (Vector3.down, Camera.main.transform.rotation * Vector3.forward);
 	}
 }

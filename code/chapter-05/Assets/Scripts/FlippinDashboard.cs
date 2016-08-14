@@ -14,14 +14,14 @@ public class FlippinDashboard : MonoBehaviour {
 		gesture = GetComponent<HeadGesture> ();
 		dashboard = GameObject.Find ("Dashboard");
 		startRotation = dashboard.transform.eulerAngles;
-		CloseDashboard ();	
+		CloseDashboard ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (gesture.isMovingDown) {
 			OpenDashboard ();
-		} else if (!gesture.isFacingDown) {
+		} else if(!gesture.isFacingDown) {
 			timer -= Time.deltaTime;
 			if (timer <= 0.0f) {
 				CloseDashboard ();

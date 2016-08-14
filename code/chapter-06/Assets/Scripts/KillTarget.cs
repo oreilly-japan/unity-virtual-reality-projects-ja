@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class KillTarget : MonoBehaviour {
@@ -8,7 +7,6 @@ public class KillTarget : MonoBehaviour {
 	public GameObject killEffect;
 	public float timeToSelect = 3.0f;
 	public int score;
-	public Text scoreText;
 
 	private ParticleSystem.EmissionModule hitEffectEmission;
 	private float countDown;
@@ -19,9 +17,8 @@ public class KillTarget : MonoBehaviour {
 		countDown = timeToSelect;
 		hitEffectEmission = hitEffect.emission;
 		hitEffectEmission.enabled = false;
-		scoreText.text = "Score: 0";
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		Transform camera = Camera.main.transform;
@@ -38,7 +35,6 @@ public class KillTarget : MonoBehaviour {
 				Instantiate (killEffect, target.transform.position,
 					target.transform.rotation);
 				score += 1;
-				scoreText.text = "Score: " + score;
 				countDown = timeToSelect;
 				SetRandomPosition ();
 			}

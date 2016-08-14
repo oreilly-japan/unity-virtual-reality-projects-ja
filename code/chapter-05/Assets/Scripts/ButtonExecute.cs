@@ -11,12 +11,10 @@ public class ButtonExecute : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Transform camera = Camera.main.transform;
-		Ray ray = new Ray(camera.position, camera.rotation *
-			Vector3.forward );
+		Ray ray = new Ray (camera.position, camera.rotation * Vector3.forward);
 		RaycastHit hit;
 		GameObject hitButton = null;
-		PointerEventData data = new PointerEventData
-			(EventSystem.current);
+		PointerEventData data = new PointerEventData (EventSystem.current);
 		if (Physics.Raycast (ray, out hit)) {
 			if (hit.transform.gameObject.tag == "Button") {
 				hitButton = hit.transform.parent.gameObject;
@@ -28,13 +26,13 @@ public class ButtonExecute : MonoBehaviour {
 			}
 			currentButton = hitButton;
 			if (currentButton != null) { // ハイライトする
-				ExecuteEvents.Execute<IPointerEnterHandler>	(currentButton, data, ExecuteEvents.pointerEnterHandler);
+				ExecuteEvents.Execute<IPointerEnterHandler> (currentButton, data, ExecuteEvents.pointerEnterHandler);
 				countDown = timeToSelect;
 			}
 		}
 		if (currentButton != null) {
 			countDown -= Time.deltaTime;
-			if (clicker.clicked() || countDown < 0.0f) {
+			if (clicker.clicked () || countDown < 0.0f) {
 				ExecuteEvents.Execute<IPointerClickHandler> (currentButton, data, ExecuteEvents.pointerClickHandler);
 				countDown = timeToSelect;
 			}

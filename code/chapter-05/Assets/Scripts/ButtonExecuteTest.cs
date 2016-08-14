@@ -16,16 +16,18 @@ public class ButtonExecuteTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer -= Time.deltaTime;
-		if (timer < 0.0f) {
+		if (timer < 0.0f){
 			on = !on;
 			timer = 5.0f;
 
-			PointerEventData data = new PointerEventData (EventSystem.current);
+			PointerEventData data = new PointerEventData(EventSystem.current);
 			if (on) {
 				ExecuteEvents.Execute<IPointerClickHandler> (startButton, data, ExecuteEvents.pointerClickHandler);
 			} else {
 				ExecuteEvents.Execute<IPointerClickHandler> (stopButton, data, ExecuteEvents.pointerClickHandler);
 			}
+
 		}
+	
 	}
 }

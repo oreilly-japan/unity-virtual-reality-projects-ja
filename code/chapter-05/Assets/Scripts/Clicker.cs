@@ -2,11 +2,13 @@
 using System.Collections;
 
 public class Clicker {
-	public bool clicked() {
-#if (UNITY_ANDROID || UNITY_IPHONE)
+
+	public bool clicked () {
+	#if (UNITY_ANDROID || UNITY_IPHONE)
 		return GvrViewer.Instance.Triggered;
-#else
+	#else
 		return Input.anyKeyDown;
-#endif
+	#endif
 	}
+	
 }

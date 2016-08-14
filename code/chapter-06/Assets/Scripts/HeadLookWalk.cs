@@ -6,7 +6,7 @@ public class HeadLookWalk : MonoBehaviour {
 	public bool isWalking = false;
 
 	private CharacterController controller;
-	private Clicker clicker = new Clicker();
+	private Clicker clicker = new Clicker ();
 
 	void Start () {
 		controller = GetComponent<CharacterController> ();
@@ -14,11 +14,12 @@ public class HeadLookWalk : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (clicker.clicked()) {
+		if (clicker.clicked ()) {
 			isWalking = !isWalking;
 		}
 		if (isWalking) {
 			controller.SimpleMove (Camera.main.transform.forward * velocity);
 		}
+
 	}
 }

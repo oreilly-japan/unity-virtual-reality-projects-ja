@@ -22,8 +22,8 @@ public class BodyWalk : MonoBehaviour {
 			if (!footsteps.isPlaying) {
 				footsteps.Play ();
 			}
-		} else {
-			footsteps.Stop ();
+		} else { // 歩いていない
+			footsteps.Stop();
 		}
 	}
 }

@@ -21,7 +21,7 @@ public class KillTarget : MonoBehaviour {
 		hitEffectEmission.enabled = false;
 		scoreText.text = "Score: 0";
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		Transform camera = Camera.main.transform;
@@ -29,12 +29,12 @@ public class KillTarget : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit) && (hit.collider.gameObject == target)) {
 			if (countDown > 0.0f) {
-				// 的中した際の処理
+				// ターゲット上
 				countDown -= Time.deltaTime;
 				hitEffect.transform.position = hit.point;
 				hitEffectEmission.enabled = true;
 			} else {
-				// 殺された際の処理
+				// 殺された
 				Instantiate (killEffect, target.transform.position,
 					target.transform.rotation);
 				score += 1;
@@ -43,9 +43,9 @@ public class KillTarget : MonoBehaviour {
 				SetRandomPosition ();
 			}
 		} else {
-			// リセットする
+			// リセット
 			countDown = timeToSelect;
-			hitEffectEmission.enabled  = false;
+			hitEffectEmission.enabled = false;
 		}
 	}
 
