@@ -8,31 +8,6 @@
 
 本リポジトリはオライリー・ジャパン発行書籍『[UnityによるVRアプリケーション開発](http://www.oreilly.co.jp/books/9784873117577/)』（原書名『[Unity Virtual Reality Projects](https://www.packtpub.com/game-development/unity-virtual-reality-projects)』）のサポートサイトです。
 
-## 実行環境
-
-日本語版で検証に使用した各ソフトウェアのバージョン、およびハードウェアは次のとおりです。
-
-#### ソフトウェア
-
-* Unity 5.4.0f3 <br> Unityについては前バージョンである5.3.6f1での動作も確認しています。
-* Blender 2.77
-* Android SDK API level 23
-* Xcode 7.3.1
-* Google VR SDK for Unity v0.9.1
-
-#### ハードウェア（括弧内はOSのバージョン）
-
-* Samsung Galaxy S6 edge（Android 6.0.1）
-* Nexus 5X（Android N Developer Preview 4）
-* iPhone 6 Plus（iOS 9.3.2）
-* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.11.5）
-* Windows PC, GPU: NVIDIA GeForce GTX980Ti（Windows 8）
-
-#### VRデバイス
-
-* Oculus Rift製品版、およびDK2
-* Google Cardboard
-* Sumsung Gear VR
 
 ## サンプルコード
 
@@ -61,6 +36,37 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 8. すべてのアセットにチェックが付いていることを確認して、［Import］をクリックします。
 9. Projectパネルの`Assets`を選択し、シーン（Unityのロゴがアイコンになっているもの）をダブルクリックして開くとSceneビューにオブジェクトが表示されます。
 
+[付録 A の GearVR 用のビルド設定はこちら](code/appendix-A)
+
+[付録 B の Daydream用アプリケーション開発環境の設定はこちら](code/appendix-B)
+
+
 ## 正誤表
 
 まだありません。誤植など間違いを見つけた方は、japan＠oreilly.co.jpまでお知らせください。
+
+## 実行環境
+
+日本語版で検証に使用した各ソフトウェアのバージョン、およびハードウェアは次のとおりです。
+
+#### ソフトウェア
+
+* Unity 5.4.0f3 <br> Unityについては前バージョンである5.3.6f1での動作も確認しています。
+* Blender 2.77
+* Android SDK API level 23
+* Xcode 7.3.1
+* Google VR SDK for Unity v0.9.1
+
+#### ハードウェア（括弧内はOSのバージョン）
+
+* Samsung Galaxy S6 edge（Android 6.0.1）
+* Nexus 5X（Android N Developer Preview 4）
+* iPhone 6 Plus（iOS 9.3.2）
+* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.11.5）
+* Windows PC, GPU: NVIDIA GeForce GTX980Ti（Windows 8）
+
+#### VRデバイス
+
+* Oculus Rift製品版、およびDK2
+* Google Cardboard
+* Sumsung Gear VR
