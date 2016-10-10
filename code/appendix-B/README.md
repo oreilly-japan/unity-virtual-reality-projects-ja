@@ -14,9 +14,9 @@
 1. [Google VR SDKのGitHub](https://github.com/googlevr/gvr-android-sdk/blob/master/apks/controller_emulator.apk?raw=true)からコントローラー エミュレーター アプリの apk ファイルをダウンロードします。controller_emulator.apk という名前のファイルがダウンロードされます。
 2. 端末をUSBケーブルでPCもしくはMacに接続します。(Android アプリの開発環境は設定できているものとします）
 3. キーボードからコマンドを入力して実行できる環境(ターミナル、コマンドプロンプト等)adb コマンドを使用してダウンロードした apk ファイルを端末にインストールします。
-```
+    ```
        adb install controller_emulator.apk
-```
+    ```
 4. `Contoller Emulator` という名前でインストールされたコントローラー エミュレーター アプリを起動します。 
 
 
