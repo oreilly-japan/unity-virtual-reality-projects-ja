@@ -8,6 +8,10 @@
 
 本リポジトリはオライリー・ジャパン発行書籍『[UnityによるVRアプリケーション開発](http://www.oreilly.co.jp/books/9784873117577/)』（原書名『[Unity Virtual Reality Projects](https://www.packtpub.com/game-development/unity-virtual-reality-projects)』）のサポートサイトです。
 
+## 日本語版巻末付録記事の全文を公開しました
+* [付録A Gear VR 用のビルドとタッチパッドからの入力](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2A)
+* [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
+    * UnityのDaydream Technology Preview版など、本書発売当時から更新のあった情報も追記してあります
 
 ## サンプルコード
 
@@ -36,9 +40,9 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 8. すべてのアセットにチェックが付いていることを確認して、［Import］をクリックします。
 9. Projectパネルの`Assets`を選択し、シーン（Unityのロゴがアイコンになっているもの）をダブルクリックして開くとSceneビューにオブジェクトが表示されます。
 
-[付録 A の GearVR 用のビルド設定はこちら](code/appendix-A)
+[付録 A の GearVR 用のビルド設定はこちら](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2A)
 
-[付録 B の Daydream用アプリケーション開発環境の設定はこちら](code/appendix-B)
+[付録 B の Daydream用アプリケーション開発環境の設定はこちら](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
 
 ## 実行環境
 
@@ -46,16 +50,16 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 
 #### ソフトウェア
 
-* Unity 5.4.0f3 <br> Unityについては前バージョンである5.3.6f1での動作も確認しています。
+* Unity 5.4.2f1 <br> Unityについては前バージョンである5.3.6f1での動作も確認しています。
 * Blender 2.77
 * Android SDK API level 23
 * Xcode 7.3.1
-* Google VR SDK for Unity v0.9.1
+* Google VR SDK for Unity v1.0.3
 
 #### ハードウェア（括弧内はOSのバージョン）
 
 * Samsung Galaxy S6 edge（Android 6.0.1）
-* Nexus 5X（Android N Developer Preview 4）
+* Nexus 5X（Android 7.0）
 * iPhone 6 Plus（iOS 9.3.2）
 * MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.11.5）
 * Windows PC, GPU: NVIDIA GeForce GTX980Ti（Windows 8）
