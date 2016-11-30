@@ -18,7 +18,7 @@
 サンプルコードの解説は本書籍をご覧ください。
 
 ### ダウンロード方法
-Unity 5.4.x 系をお使いの場合は
+Unity 5.4.x 系および、5.5.x 系をお使いの場合は
 <https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/archive/master.zip>
 から、
 
@@ -50,7 +50,7 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 
 #### ソフトウェア
 
-* Unity 5.4.2f1 <br> Unityについては前バージョンである5.3.6f1での動作も確認しています。
+* Unity 5.5.0f3, 5.4.2f2-GVR12, 5.4.2f1, 5.3.6f1
 * Blender 2.77
 * Android SDK API level 23
 * Xcode 7.3.1
