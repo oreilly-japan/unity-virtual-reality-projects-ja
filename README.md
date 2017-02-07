@@ -54,7 +54,7 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 * Blender 2.77
 * Android SDK API level 23
 * Xcode 7.3.1
-* Google VR SDK for Unity v1.0.3
+* Google VR SDK for Unity v1.20
 
 #### ハードウェア（括弧内はOSのバージョン）
 
