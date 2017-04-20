@@ -8,14 +8,6 @@
 
 本リポジトリはオライリー・ジャパン発行書籍『[UnityによるVRアプリケーション開発](http://www.oreilly.co.jp/books/9784873117577/)』（原書名『[Unity Virtual Reality Projects](https://www.packtpub.com/game-development/unity-virtual-reality-projects)』）のサポートサイトです。
 
-## Unity 5.6の対応について
-**現時点ではAndroidおよびiOSともにCardboard用のビルドを行う際はUnity 5.5系を使用することをおすすめします**。
-
-CardboardとDaydreamにネイティブ対応したUnity 5.6の正式版が2017年3月31日にリリースされたことに伴い、[Unity 5.6で変わるCardboard用のビルド設定についてはこちら](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/tree/unity56x#unity-56でのcardboardおよびdaydream用のビルド設定)に解説を追記しましたが、トリガーを検知する `GvrViewer.Instance.Triggered` の動作に問題があったり、iOSは[Google VRのサイト](https://developers.google.com/vr/unity/get-started-ios)に5.6 betaには未対応という記述もあり、実際に試してみたところUnityから書き出したXcodeプロジェクトのビルドに失敗します(リンク時の重複オブジェクトエラーが起きているようです)。
-
-Daydream用のビルドについては問題ありません。下記付録Bをご参照ください。
-
-
 ## 日本語版巻末付録記事の全文を公開しました
 * [付録A Gear VR 用のビルドとタッチパッドからの入力](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2A)
 * [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
