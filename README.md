@@ -21,6 +21,38 @@ Daydream用のビルドについては問題ありません。下記付録Bを�
 * [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
     * Unity 5.6での対応方法など、本書発売当時から更新のあった情報も追記してあります
 
+## Unity 5.6でのCardboardおよびDaydream用の対応について
+2017年3月31日にCardboardとDaydreamにネイティブ対応したUnity 5.6の正式版がリリースされました。それに伴い、本書で扱うプロジェクトのビルド設定とスクリプトに修正が必要な箇所があります。
+
+### ビルド設定の修正
+P.52の訳注にて「UnityもCardboardやDaydreamにネイティブ対応することを表明しているため、将来のバージョンではこのチェックを入れて、さらに［＋］ボタンを押して選択肢の中からGoogle VR、Cardboard、Daydream等の要素を選択して追加するという操作になることが想定されます。」と追記しておりましたが、その時が来たということになります。
+
+以下はP.51の「3.4.5 ビルドの設定」をUnity 5.6以降用に修正したものです。変更点は［Virtual Reality Supported］のチェックボックスをONにすることです。（以前のバージョンではこのチェックボックスはOFFにしていましたが、UnityがCardboardとDaydreamにネイティブ対応したことにより、今後はこの設定が必要になります）
+
+1. メインメニューの［File］→［Build  Settings...］を選択します。
+
+2. ［Scenes In Build］に現在のシーンがない場合は、［Add Open Scenes］をクリックします。
+
+3. 左側のPlatformの一覧から［Android］または［iOS］を選択して、［Switch Platform］をクリックします。
+
+4. それから、［Player Settings...］をクリックします。InspectorパネルにPlayer Settingsが表示されます。
+
+5. ［Other Settings］の中にある［Virtual Reality Supported］のチェックをONにします 。
+
+6. [図1](#fig_b_2)のように［Virtual Reality Supported］チェックボックスの下に［Cardboard］もしくは［Daydream］の文字が表示されていることも確認します。もし表示されていなければ［＋］ボタンを押して選択肢の中から追加します。（iOSの場合は［Cardboard］のみが表示されます。）
+
+7. ［Other Settings］→［Identification］→［Bundle Identifier］にcom.YourName.VRisAwesomeなどのように有効な文字列を入力します。
+
+※ ［Resolution and Presentation］の中にある［Default Orientation］は、［Virtual Reality Supported］のチェックをONにすると自動設定されます。
+
+![図1 Virtual Reality Supportedのチェックボックス](https://raw.githubusercontent.com/wiki/oreilly-japan/unity-virtual-reality-projects-ja/images/ch13b/vr_support_checkbox.png)
+
+<a name="fig_b_2">図1</a> Virtual Reality Supportedのチェックボックス
+
+### スクリプトの修正
+本書の複数箇所で使用している`Clicker.cs`というスクリプトを[Clicker.cs修正版](https://gist.github.com/ktaka/3d8a5b441e02a16a9b99ea1e18b8c1dd)のように修正する必要があります。（このリポジトリにあるものは修正済みです）
+これは、現状のUnity 5.6 (5.6.0f3) とGoogle VR SDK for Unity 1.40の組合せでは、これまで使用していた`GvrViewer.Instance.Triggered`ではCardboardのトリガー操作を検知できず、Googleのサンプルでも`GvrViewer.Instance.Triggered`は使われていない様子のため、[GvrPointerInputModule.cs](https://github.com/googlevr/gvr-unity-sdk/blob/master/GoogleVR/Scripts/EventSystem/GvrPointerInputModule.cs) を参考に、Cardboardの場合に`GvrViewer.Instance.Triggered`を使わないよう、且つDaydreamでもOculus系（Rift, Gear VR）でも大丈夫なように修正したものです。
+
 ## サンプルコード
 
 サンプルコードの解説は本書籍をご覧ください。
@@ -58,18 +90,20 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 
 #### ソフトウェア
 
-* Unity 5.5.0f3, 5.4.2f2-GVR12, 5.4.2f1, 5.3.6f1
+* Unity 5.6.0f3, 5.5.0f3, 5.4.2f2-GVR12, 5.4.2f1, 5.3.6f1
 * Blender 2.77
 * Android SDK API level 23
-* Xcode 7.3.1
-* Google VR SDK for Unity v1.20
+* Xcode 8.3, 7.3.1
+* Google VR SDK for Unity v1.40
 
 #### ハードウェア（括弧内はOSのバージョン）
 
 * Samsung Galaxy S6 edge（Android 6.0.1）
 * Nexus 5X（Android 7.0）
+* Moto Z (Android 7.0)
 * iPhone 6 Plus（iOS 9.3.2）
-* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.11.5）
+* iPhone SE (iOS 10.3.1)
+* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.12.4）
 * Windows PC, GPU: NVIDIA GeForce GTX980Ti（Windows 8）
 
 #### VRデバイス
@@ -77,6 +111,7 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 * Oculus Rift製品版、およびDK2
 * Google Cardboard
 * Sumsung Gear VR
+* Daydream View
 
 ## 正誤表
 

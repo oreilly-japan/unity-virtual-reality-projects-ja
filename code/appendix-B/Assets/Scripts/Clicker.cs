@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Clicker {
 	public bool clicked() {
-#if (UNITY_ANDROID)
-		return GvrController.ClickButtonDown;
-#else
-		return Input.anyKeyDown;
-#endif
+		bool triggerDown = Input.anyKeyDown;
+
+		#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
+		triggerDown |= GvrController.ClickButtonDown;
+		#endif
+
+		return triggerDown;
 	}
 }
