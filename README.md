@@ -13,8 +13,11 @@
 * [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
     * Unity 5.6での対応方法など、本書発売当時から更新のあった情報も追記してあります
 
-## Unity 5.6でのCardboardおよびDaydream用のビルド設定
-2017年3月31日にCardboardとDaydreamにネイティブ対応したUnity 5.6の正式版がリリースされました。それに伴い本書のページで解説しているビルド方法に変更があります。P.52にて「UnityもCardboardやDaydreamにネイティブ対応することを表明しているため、将来のバージョンではこのチェックを入れて、さらに［＋］ボタンを押して選択肢の中からGoogle VR、Cardboard、Daydream等の要素を選択して追加するという操作になることが想定されます。」という訳注を入れておりましたが、その時が来たということになります。
+## Unity 5.6でのCardboardおよびDaydream用の変更
+2017年3月31日にCardboardとDaydreamにネイティブ対応したUnity 5.6の正式版がリリースされました。それに伴い、本書で扱うプロジェクトのビルド設定とスクリプトに修正が必要な箇所があります。
+
+### ビルド設定
+P.52の訳注にて「UnityもCardboardやDaydreamにネイティブ対応することを表明しているため、将来のバージョンではこのチェックを入れて、さらに［＋］ボタンを押して選択肢の中からGoogle VR、Cardboard、Daydream等の要素を選択して追加するという操作になることが想定されます。」と追記しておりましたが、その時が来たということになります。
 
 以下はP.51の「3.4.5 ビルドの設定」をUnity 5.6以降用に修正したものです。変更点は［Virtual Reality Supported］のチェックボックスをONにすることです。（以前のバージョンではこのチェックボックスはOFFにしていましたが、UnityがCardboardとDaydreamにネイティブ対応したことにより、今後はこの設定が必要になります）
 
@@ -38,7 +41,9 @@
 
 <a name="fig_b_2">図1</a> Virtual Reality Supportedのチェックボックス
 
-
+### スクリプト
+本書の複数箇所で使用している`Clicker.cs`というスクリプトを[Clicker.cs修正版](https://gist.github.com/ktaka/3d8a5b441e02a16a9b99ea1e18b8c1dd)のように修正する必要があります。（このリポジトリにあるものは修正済みです）
+これは、現状のUnity 5.6 (5.6.0f3) とGoogle VR SDK for Unity 1.40の組合せでは、これまで使用していた`GvrViewer.Instance.Triggered`ではCardboardのトリガー操作を検知できず、Googleのサンプルでも`GvrViewer.Instance.Triggered`は使われていない様子のため、[GvrPointerInputModule.cs](https://github.com/googlevr/gvr-unity-sdk/blob/master/GoogleVR/Scripts/EventSystem/GvrPointerInputModule.cs) を参考に、Cardboardの場合に`GvrViewer.Instance.Triggered`を使わないよう、且つDaydreamでもOculus系（Rift, Gear VR）でも大丈夫なように修正したものです。
 
 ## サンプルコード
 
@@ -81,7 +86,7 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 * Blender 2.77
 * Android SDK API level 23
 * Xcode 8.3, 7.3.1
-* Google VR SDK for Unity v1.30, v1.20
+* Google VR SDK for Unity v1.40
 
 #### ハードウェア（括弧内はOSのバージョン）
 
@@ -89,7 +94,8 @@ code フォルダーの下に本書のUnityプロジェクトを章ごとに完�
 * Nexus 5X（Android 7.0）
 * Moto Z (Android 7.0)
 * iPhone 6 Plus（iOS 9.3.2）
-* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.11.5）
+* iPhone SE (iOS 10.3.1)
+* MacBook Pro Retina, 13-inch, Mid 2014（Mac OS X 10.12.4）
 * Windows PC, GPU: NVIDIA GeForce GTX980Ti（Windows 8）
 
 #### VRデバイス
