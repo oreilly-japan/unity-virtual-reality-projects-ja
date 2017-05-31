@@ -25,7 +25,7 @@ Unityの5.6より前のバージョンはサポート対象外となりました
 * P.239 「10.4.2 Google Cardboard での利用」
    * 「FPSControllerに加えてGoogle VR SDKのプレハブ、GvrViewerMainを使用する必要があります。」を削除。
 * P.240 
-   * 「2. ProjectパネルのAssets/GoogleVR/PrefabsからGvrViewerMainを見つけて、現在のシーンにドラッグします。」を削除。
+   * 「2. ProjectパネルのAssets/GoogleVR/PrefabsからGvrViewerMainを見つけて、現在のシーンにドラッグします。」を削除。
    * NetworkStart.csスクリプトの修正内容は[こちら](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/blob/master/code/chapter-10/Assets/Scripts/NetworkStart.cs)を参照ください。
    * 「このスクリプトでは、gvrMain の値を public な GameObject として定義します。Unity エ ディターにて、HierarchyパネルのNetworkControllerを選択した状態で、Inspectorの NetworkStart (Script) コンポーネントに Gvr Main の枠があるのを確認して、GvrViewerMain を Gvr Main にドラッグします。」を削除。
 * P.241 「*1 訳注」の内容は下記の「ビルド設定の修正」と同様になります。
