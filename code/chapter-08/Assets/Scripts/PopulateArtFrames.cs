@@ -8,7 +8,7 @@ public class PopulateArtFrames : MonoBehaviour {
 	void Start () {
 		int imageIndex = 0;
 		foreach (Transform artwork in transform) {
-			GameObject art = artwork.FindChild ("Image").gameObject;
+			GameObject art = artwork.Find ("Image").gameObject;
 			Renderer rend = art.GetComponent<Renderer> ();
 			Shader shader = Shader.Find ("Standard");
 			Material mat = new Material (shader);

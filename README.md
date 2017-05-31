@@ -13,6 +13,29 @@
 * [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
     * Unity 5.6での対応方法など、本書発売当時から更新のあった情報も追記してあります
 
+## Google VR SDK for Unity v1.50について
+Unityの5.6より前のバージョンはサポート対象外となりました。（CardboardおよびDaydreamにネイティブ対応しているUnityのみが対象です。）
+
+`GvrViewerMain`が無くなり、その代わりに`GvrEditorEmulator`が追加されました。この`GvrEditorEmulator`はUnityのエディターでプレビューする際にのみ必要なものです。
+これらの変更に伴い、第1刷、第2刷ともに本文に下記の訂正があります。
+* P.51 「3.4.4 プレハブの追加」において必要な手順は以下の一つのみとなります。プレハブの変更の適用も不要です。
+  * Project パネルの Assets/GoogleVR/Prefabs フォルダーの中から`GvrEditorEmulator`を見つけて、［Hierarchy］パネルにドラッグします。
+* P. 135 「Google CardboardもHMDの向きをリセットする同様の機能を持っています。もちろん位置のトラッキング機能はありません。GvrViewer.Recenter() を呼ぶことで向きとモーションセンサーだけがリセットされます。」という記述を削除
+   * CardboardでもOculusと同様に`InputTracking.Recenter() `で再センタリング可能です。
+* P.239 「10.4.2 Google Cardboard での利用」
+   * 「FPSControllerに加えてGoogle VR SDKのプレハブ、GvrViewerMainを使用する必要があります。」を削除。
+* P.240 
+   * 「2. ProjectパネルのAssets/GoogleVR/PrefabsからGvrViewerMainを見つけて、現在のシーンにドラッグします。」を削除。
+   * NetworkStart.csスクリプトの修正内容は[こちら](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/blob/master/code/chapter-10/Assets/Scripts/NetworkStart.cs)を参照ください。
+   * 「このスクリプトでは、gvrMain の値を public な GameObject として定義します。Unity エ ディターにて、HierarchyパネルのNetworkControllerを選択した状態で、Inspectorの NetworkStart (Script) コンポーネントに Gvr Main の枠があるのを確認して、GvrViewerMain を Gvr Main にドラッグします。」を削除。
+* P.241 「*1 訳注」の内容は下記の「ビルド設定の修正」と同様になります。
+* P.253 「A.2.3 メインカメラの設定」の内容は不要となります。
+
+このリポジトリにある各章のプロジェクトで使用していた`GvrViewerMain`は削除してあります。
+Unityのエディターでプレビューをする際はGoogle VR SDK for Unityをダウンロード、インポートして`GvrEditorEmulator`を［Hierarchy］パネルに追加してください。
+（もしGoogle VR SDK for Unity v1.40以前を使用する必要がある場合は[before_GVR1.50タグ](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/tree/before_GVR1.50)を参照してください）
+
+
 ## Unity 5.6でのCardboardおよびDaydream用の対応について
 2017年3月31日にCardboardとDaydreamにネイティブ対応したUnity 5.6の正式版がリリースされました。それに伴い、本書で扱うプロジェクトのビルド設定とスクリプトに修正が必要な箇所があります。
 

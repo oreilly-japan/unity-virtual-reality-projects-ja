@@ -3,22 +3,16 @@ using UnityEngine.Networking;
 using UnityEngine.VR;
 
 public class NetworkStart : MonoBehaviour {
-	public GameObject oculusMain;
-	public GameObject gvrMain;
-	public string hostIP = "192.168.12.5";
+	public string hostIP = "10.0.1.14";
 
 	void Awake () {
-		//VRSettings.enabled = false;
+		VRSettings.enabled = false;
 
 #if (UNITY_ANDROID || UNITY_IPHONE)
-		oculusMain.SetActive(true);
-		//gvrMain.SetActive (true);
+		VRSettings.enabled = true;
 		NetworkManager net = GetComponent<NetworkManager> ();
 		net.networkAddress = hostIP;
 		net.StartClient ();
-#else
-		oculusMain.SetActive (true);
-		//gvrMain.SetActive (false);
 #endif
 	}
 	

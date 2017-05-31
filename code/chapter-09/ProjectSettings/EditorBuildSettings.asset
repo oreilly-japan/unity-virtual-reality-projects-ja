@@ -7,15 +7,22 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Diorama.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/360Degrees.unity
-  - enabled: 0
+    guid: 83db4f83ea0d04765b0dd52113982abe
+  - enabled: 1
     path: Assets/PhotoSphere.unity
+    guid: ae43e74c785c249bbaab8424bfa68bc7
   - enabled: 0
     path: Assets/Globes.unity
+    guid: 76ce74cf5898c483cb0644efe1366982
   - enabled: 0
     path: Assets/Infographics.unity
+    guid: 55785378d90e0484ca3dbb078ea9f1e7
   - enabled: 0
     path: Assets/MagicalOrbs.unity
-  - enabled: 1
+    guid: b3b3203e6f32341859df808308f372be
+  - enabled: 0
     path: Assets/Panorama.unity
+    guid: d8139e8d2391e48bba4b17a0cdd2942e
