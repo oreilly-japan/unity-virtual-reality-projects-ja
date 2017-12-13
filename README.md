@@ -8,6 +8,11 @@
 
 本リポジトリはオライリー・ジャパン発行書籍『[UnityによるVRアプリケーション開発](http://www.oreilly.co.jp/books/9784873117577/)』（原書名『[Unity Virtual Reality Projects](https://www.packtpub.com/game-development/unity-virtual-reality-projects)』）のサポートサイトです。
 
+## フォーラム
+
+VRやARについて日本語で質問できる[フォーラム](https://groups.google.com/d/forum/vr_ar_ja)があります。
+お気軽にご参加ください。本書の翻訳者も参加していますので、本書に関することも質問して頂けます。
+
 ## 日本語版巻末付録記事の全文を公開しました
 * [付録A Gear VR 用のビルドとタッチパッドからの入力](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2A)
 * [付録B Daydreamコントローラーを使ってみる](https://github.com/oreilly-japan/unity-virtual-reality-projects-ja/wiki/%E4%BB%98%E9%8C%B2B)
