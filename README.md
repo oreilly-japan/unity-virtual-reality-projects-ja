@@ -90,7 +90,7 @@ Unity 5.3.x 系をお使いの場合は
 code フォルダーの下に本書のUnityプロジェクトを章ごとに完成した状態で用意してあります。ただし、Unity標準アセットやGoogle VR SDK等は含まれていないので、プロジェクトをUnityで開いたら次の手順で必要なものをインポートしてください。
 （本書の手順に従って新規にプロジェクトを作成したい方は、`resources`フォルダーの下に各章ごとに必要なリソースファイルを置いてありますので、必要に応じてお使いください。）
 
-※ 2018.2以降のバージョン以降のUnityには標準アセットが含まれなくなりました。2018.1以前のバージョンのUnityをお使いいただくか、もしくはAsset Storeにある[Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)をダウンロード、インポートしてください。Asset Storeからインポートした場合はCharacters、Effects、ParticleSystemsのパッケージの個別のインポートは不要です。
+※ 2018.2以降のバージョンのUnityには標準アセットが含まれなくなりました。2018.1以前のバージョンのUnityをお使いいただくか、もしくはAsset Storeにある[Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351)をダウンロード、インポートしてください。Asset Storeからインポートした場合はCharacters、Effects、ParticleSystemsのパッケージの個別のインポートは不要です。
 
 1. メインメニューの［Assets］を選択します。それから［Import Package］→［Characters］の順に操作します。
 2. インポート可能なすべてのものをリスト表示したインポートダイアログがポップアップするので［Import］をクリックします。
